@@ -1,9 +1,9 @@
 @import url(../fonts/fonts.css);
 
 body {
+  max-width: 1440px;
   font-family: 'Raleway', 'sans-serif';
   font-weight: 400;
-  max-width: 1440px;
   /* min-width: 1100px;*/
 }
 
@@ -28,16 +28,17 @@ header {
 .header {
   display: flex;
   justify-content: space-between;
-  height: inherit;
   align-items: center;
+  height: inherit;
   background-color: #fff;
 }
+
 /* начало стилей для навигации*/
 .header_menu {
-  font-size: 18px;
-  color: #000;
-  line-height: 21px;
   min-width: 388px;
+  color: #000;
+  font-size: 18px;
+  line-height: 21px;
 }
 
 .header_menu-list {
@@ -47,7 +48,7 @@ header {
 }
 
 .header_menu li.header_menu-list_item {
-  list-style-type: none
+  list-style-type: none;
 }
 
 .header_menu li.header_menu-list_item-active {
@@ -76,9 +77,9 @@ li a {
 }
 
 .header_contacts-list {
-  list-style-type: none;
   font-size: 18px;
   line-height: 1.35;
+  list-style-type: none;
 }
 
 .header_contacts-list_item-link {
@@ -87,39 +88,50 @@ li a {
 }
 
 .header-logo {
+  flex-shrink: 0;
   width: 148px;
   height: 105px;
-  flex-shrink: 0;
 }
 
 .header-logo_image {
   /*padding-right: 145px;*/
   padding-right: 10vw;
 }
+
 .content {
   max-width: 1440px;
 }
+/*main {
+  
+}*/
 .cover {
-  /*padding: 165px 50px 62px;*/
-  width: inherit; /*потом поменяй на 100%*/
-  background: url(../images/cover.jpg);
-  background-size: cover;
   position: relative;
   z-index: 0;
+  /*padding: 165px 50px 62px;*/
+  width: inherit;
+  /*потом поменяй на 100%*/
+  max-height: 757px;
+  background: url(../images/cover.jpg);
+  background-size: cover;
 }
+
 .overlay {
   position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0, .6);
-  z-index: -1;
+  background: rgba(0, 0, 0, .6);
 }
+
 .cover-content {
-  padding: 165px 50px 237px;
   display: flex;
   flex-direction: column;
   gap: 20px;
+  padding: 165px 50px 135px;
 }
+
 /*.cover-content span {
   display: block;
   width: inherit;
@@ -129,54 +141,243 @@ li a {
   color: #fff;
   text-transform: uppercase;
 }*/
-.cover-content_item { /* сделать его блочным*/
-  font-size: 100px;
+.cover-content_item {
+  color: #fff;
   font-weight: 700;
+  /* сделать его блочным*/
+  font-size: 100px;
   line-height: 1.15;
   letter-spacing: 30px;
-  color: #fff;
   text-transform: uppercase;
 }
 
 .text-item_ext {
   letter-spacing: 60px;
-} /*cтили для оно*/
+}
+
+/*cтили для оно*/
 
 .text-center {
   align-self: center;
   line-height: 1;
 }
+
 .text-item_space-center {
   letter-spacing: 60px;
 }
+
 /* стили для тебе*/
 
 .text-right {
-  align-self: end ;
+  align-self: end;
   line-height: 1;
-} 
+}
 
 .text-item_space-right {
   letter-spacing: 60px;
 }
+
 .last-item {
   letter-spacing: 0;
 }
+
 /*стили для оно*/
 
-/* стили для sunline*/
-
-/*
-
-.text-item_space-center {
-  letter-spacing: 60px;
+/* стили для subline*/
+.cover_description {
+  display: flex;
+  justify-content: flex-end;
+  gap: 78px;
+  padding: 0 50px 50px;
 }
 
-.text-item-space {
-  letter-spacing: 30px;
+.cover_description-text {
+  margin: 12px 0;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.27;
+  text-transform: uppercase;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+  word-spacing: 17px;
 }
-.text-right {
-  align-self: end ;
-  line-height: 100%;
-  letter-spacing: 60px;
-} 
+.word-spacing {
+  word-spacing: 25px;
+}
+
+.bet-button {
+  align-self: center;
+  border: 1px solid #fff;
+  padding: 12px 32px;
+  color: #fff;
+  font-size: 22px;
+  line-height: 1.18;
+  text-transform: uppercase;
+  background-color: transparent;
+}
+.intro { /*осталось разобраться с flex-grow*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 27px;
+  width: inherit;
+  min-height: 579px;
+  padding: 159px 50px 0;
+}
+.lots_heading {
+  padding-left: 40px;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.lots_card-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  gap: 25px;
+  
+}
+.card {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 430px;
+  height: 450px;
+  padding: 50px 40px;
+  background-size: cover;
+}
+
+.card_type_film { 
+  flex-grow: 0;
+  flex-shrink: 0;
+  background-image: url(../images/card-lot-01.jpg);
+}
+.card_type_book {
+  flex-grow:0;
+  flex-shrink: 0;
+  background-image: url(../images/card-lot-02.jpg);
+}
+.card_type_picture {
+  flex-grow: 1;
+  flex-shrink: 1;
+  background-image: url(../images/card-lot-03.jpg);
+}
+
+.card-title {
+  color: #fff;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.2;
+  text-decoration-line: underline;
+  text-transform: uppercase;
+}
+.card-link {
+  text-decoration: underline;
+}
+.card-text {
+  color: #fff;
+  font-size: 20px;
+  line-height: 1.2;
+}
+
+.lots__look-more-link {
+  padding-bottom: 2px;
+  padding-left: 40px;
+  color: #000;
+  font-size: 20px;
+  text-decoration-line: underline;
+  text-underline-offset: 2px;
+  text-underline-position: under;
+}
+.about {
+  display: flex;
+  gap: 25px;
+  padding: 159px 50px 0;
+}
+div.about_column {
+  display: flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: start;
+  min-width: 430px;
+  min-height: 240px;
+}
+.about_logo {
+  border-radius: 50%;
+  padding: 63px 46px;
+  background-color: #000;
+}
+.header-logo-image {
+  align-self: center;
+  width: 148px;
+  height: 114px;
+}
+
+article.about_column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  flex-shrink: 1;
+  gap: 100px;
+  padding-top: 100px;
+}
+h6 {
+  color: #000;
+  font-weight: 700;
+  font-size: 40px;
+  text-transform: uppercase;
+}
+.about_text {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  color: #000;
+  font-size: 20px;
+  line-height: normal;
+}
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 159px 50px 90px;
+}
+.footer .header_contacts li a {
+  text-underline-position: under;
+}
+.footer_menu {
+  color: #000;
+  font-size: 18px;
+  line-height: 21px;
+}
+.footer_menu-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer_menu-list li{
+  list-style-type: none;
+}
+.footer_menu-list_item-link {
+  text-decoration: none;
+}
+.footer_menu-list_item-link-active {
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.footer_social-list {
+  display: flex;
+  justify-content: space-between;
+  gap: 47px;
+}
+.footer_social-list-item {
+  list-style-type: none;
+}
+.footer_social-icon {
+  max-width: 240px;
+  max-height: 48px;
+}
+
+
+
