@@ -1,11 +1,12 @@
 body {
   font-family: 'Raleway', 'sans-serif';
   font-weight: 400;
+  margin: 0 auto;
 }
 
 header {
-  max-width: 1440px;
   padding: 90px 50px 158px;
+  margin: 0 auto;
 }
 
 .header {
@@ -51,7 +52,7 @@ li a {
 }
 
 .contacts {
-  min-width: 240px;
+  max-width: 240px;
 }
 
 ul.contacts-list {
@@ -83,7 +84,7 @@ ul.contacts-list {
   position: relative;
   z-index: 0;
   width: inherit;
-  max-height: 757px;
+  min-height: 757px;
   background: url(../images/cover.jpg);
   background-position: center;
   background-size: cover;
@@ -200,7 +201,7 @@ ul.contacts-list {
   flex-direction: column;
   flex-basis: 430px;
   justify-content: space-between;
-  width: 430px;
+  min-width: 430px;
   min-height: 450px;
   padding: 50px 40px;
   background-repeat: no-repeat;
@@ -216,7 +217,6 @@ ul.contacts-list {
 }
 
 .card_type_picture {
-  flex-grow: 1;
   background-image: url(../images/card-lot-03.jpg);
 }
 
@@ -349,6 +349,6 @@ footer {
 }
 
 .footer_social-icon {
-  max-width: 240px;
+  width: 48px;
   height: 48px;
 }
