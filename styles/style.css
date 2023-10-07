@@ -185,8 +185,18 @@ ul.contacts-list {
 .lots_card-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
   gap: 25px;
+  list-style: none;
+}
+
+.lots_card-list_item {
+  width: 430px;
+  height: 450px;
+  flex-grow: 1;
+}
+
+.card-link {
+  text-decoration: none;
 }
 
 .card {
@@ -194,10 +204,8 @@ ul.contacts-list {
   z-index: 0;
   display: flex;
   flex-direction: column;
-  flex-basis: 430px;
-  justify-content: space-between;
-  width: 430px;
   min-height: 450px;
+  justify-content: space-between;
   padding: 50px 40px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -213,7 +221,6 @@ ul.contacts-list {
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
-  flex-grow: 1;
 }
 
 .card-title {
@@ -223,10 +230,6 @@ ul.contacts-list {
   line-height: 1.2;
   text-decoration-line: underline;
   text-transform: uppercase;
-}
-
-.card-link {
-  text-decoration: underline;
 }
 
 .card-text {
