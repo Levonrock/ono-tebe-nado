@@ -73,7 +73,7 @@ ul.contacts-list {
 }
 
 .header-logo_image {
-  padding-right: 10vw;
+  padding-right: 145px;
 }
 
 .content {
@@ -202,7 +202,7 @@ ul.contacts-list {
   flex-basis: 430px;
   justify-content: space-between;
   min-width: 430px;
-  min-height: 450px;
+  height: 450px;
   padding: 50px 40px;
   background-repeat: no-repeat;
   background-size: cover;
@@ -218,6 +218,7 @@ ul.contacts-list {
 
 .card_type_picture {
   background-image: url(../images/card-lot-03.jpg);
+  flex-grow: 1;
 }
 
 .card-title {
