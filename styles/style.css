@@ -193,7 +193,6 @@ ul.contacts-list {
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 25px;
-
 }
 
 .card {
@@ -203,7 +202,7 @@ ul.contacts-list {
   flex-direction: column;
   flex-basis: 430px;
   justify-content: space-between;
-  max-width: 430px;
+  width: 430px;
   min-height: 450px;
   padding: 50px 40px;
   background-repeat: no-repeat;
