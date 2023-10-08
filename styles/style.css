@@ -1,15 +1,15 @@
 /*Спасибо за Ваше терпение)*/
 .header {
   padding: 90px 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: inherit;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
   background-color: #fff;
 }
 
 /* начало стилей для навигации*/
 .header_menu {
+  display: flex;
+  align-items: center;
   min-width: 388px;
   color: #000;
   font-size: 18px;
@@ -41,6 +41,9 @@ li a {
 .header a {
   text-underline-position: under;
 }
+header .contacts {
+  justify-self: end;
+}
 
 .contacts {
   max-width: 240px;
@@ -64,7 +67,8 @@ ul.contacts-list {
 }
 
 .header-logo_image {
-  padding-right: 10vw;
+  width: 148px;
+  height: 105px;
 }
 
 .content {
