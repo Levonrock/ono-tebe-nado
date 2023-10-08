@@ -1,9 +1,6 @@
 /*Спасибо за Ваше терпение)*/
-header {
-  padding: 90px 50px;
-}
-
 .header {
+  padding: 90px 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
